@@ -1,0 +1,113 @@
+.App {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.folder-container {
+  margin-left: 20px;
+}
+
+.folder-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.folder-header:hover {
+  background-color: #f0f0f0;
+}
+
+.folder-header span {
+  flex-grow: 1;
+  font-weight: bold;
+  color: #333;
+}
+
+.folder-header button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.folder-header button:hover {
+  background-color: #0056b3;
+}
+
+.folder-header .delete-btn {
+  background-color: #dc3545;
+}
+
+.folder-header .delete-btn:hover {
+  background-color: #c82333;
+}
+
+.folder-content {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background-color: #ffffff;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.file-item:hover {
+  background-color: #f8f9fa;
+}
+
+.file-item button {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.file-item button:hover {
+  background-color: #c82333;
+}
+
+.file-item .file-icon {
+  margin-right: 8px;
+}
+
+.plus-icon {
+  color: #28a745;
+}
+
+.folder-open {
+  color: #28a745;
+}
