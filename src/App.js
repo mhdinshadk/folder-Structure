@@ -16,7 +16,7 @@ function App() {
   const handleCreateFolder = (parentFolder) => {
     const folderName = prompt('Enter folder name:');
     if (folderName) {
-      setFolders(prev => ({
+      setFolders((prev) => ({
         ...prev,
         [parentFolder]: {
           ...prev[parentFolder],
@@ -29,7 +29,7 @@ function App() {
   const handleCreateFile = (folderName) => {
     const fileName = prompt('Enter file name:');
     if (fileName) {
-      setFolders(prev => ({
+      setFolders((prev) => ({
         ...prev,
         [folderName]: [...prev[folderName], fileName] // Add new file
       }));
@@ -37,19 +37,17 @@ function App() {
   };
 
   const handleDeleteItem = (item) => {
-    const itemName = typeof item === 'string' ? item : item;
-    const folderName = Object.keys(folders).find(folder => {
-      return Array.isArray(folders[folder]) && folders[folder].includes(itemName);
-    });
-
-    if (folderName) {
-      setFolders(prev => ({
+   
+    if (Array.isArray(folders[item])) {
+  
+      setFolders((prev) => ({
         ...prev,
-        [folderName]: prev[folderName].filter(file => file !== itemName)
+        [item]: prev[item].filter((file) => file !== item)
       }));
     } else {
+      // Otherwise, it's a folder
       const updatedFolders = { ...folders };
-      delete updatedFolders[itemName]; // Delete folder
+      delete updatedFolders[item]; 
       setFolders(updatedFolders);
     }
   };

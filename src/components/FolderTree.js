@@ -5,7 +5,7 @@ const FolderTree = ({ data, onCreateFolder, onCreateFile, onDeleteItem }) => {
   const [openFolders, setOpenFolders] = useState({});
 
   const toggleFolder = (folderName) => {
-    setOpenFolders(prev => ({
+    setOpenFolders((prev) => ({
       ...prev,
       [folderName]: !prev[folderName]
     }));
@@ -31,7 +31,7 @@ const FolderTree = ({ data, onCreateFolder, onCreateFile, onDeleteItem }) => {
                     <button onClick={() => onDeleteItem(file)}><FaTrashAlt /></button>
                   </div>
                 ))
-              : Object.keys(contents).map(subFolder => renderFolder(subFolder, contents[subFolder]))}
+              : Object.keys(contents).map((subFolder) => renderFolder(subFolder, contents[subFolder]))}
           </div>
         )}
       </div>
@@ -40,9 +40,10 @@ const FolderTree = ({ data, onCreateFolder, onCreateFile, onDeleteItem }) => {
 
   return (
     <div>
-      {Object.keys(data).map(folder => renderFolder(folder, data[folder]))}
+      {Object.keys(data).map((folder) => renderFolder(folder, data[folder]))}
     </div>
   );
 };
 
 export default FolderTree;
+
